@@ -31,7 +31,7 @@ class TracPost(Plugin):
     def post_process(self, group, event, is_new, **kwargs):
         if not is_new or not self.is_configured(event.project):
             return
-        rpc_srv = xmlrpclib.ServerProxy('https://sentry:33512121@smrand.joinerysoft.com:91/trac/login/rpc', allow_none=True)
+        rpc_srv = xmlrpclib.ServerProxy('https://user:pass@hostname.com:91/trac/login/rpc', allow_none=True)
         socket.setdefaulttimeout(30)
 	attrs = {'priority':"minor"}
 	if event.message != None:
