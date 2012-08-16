@@ -24,7 +24,7 @@ setup(
     version='0.1',
     author='Josh Harwood',
     author_email='jharwood@joinerysoft.com',
-    url='',
+    url='https://github.com/mr-bo-jangles/sentry_tracpost/',
     description='A Sentry extension which integrates with Trac',
     long_description=__doc__,
     license='BSD',
