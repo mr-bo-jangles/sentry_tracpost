@@ -21,10 +21,10 @@ install_requires = [
 
 setup(
     name='sentry-tracpost',
-    version='0.1',
+    version='0.3.0',
     author='Josh Harwood',
     author_email='jharwood@joinerysoft.com',
-    url='https://github.com/mr-bo-jangles/sentry_tracpost/',
+    url='',
     description='A Sentry extension which integrates with Trac',
     long_description=__doc__,
     license='BSD',
@@ -36,8 +36,11 @@ setup(
     test_suite='runtests.runtests',
     entry_points={
        'sentry.plugins': [
-            'trac = sentry_trac.plugin:TracPost'
+            'tracpost = sentry_tracpost.plugin:TracPost'
         ],
+       'sentry.apps': [
+	    'tracpost = sentry_tracpost.plugin:TracPost'
+	],
     },
     include_package_data=True,
     classifiers=[
